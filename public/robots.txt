@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://buscord.online/sitemap.xml
