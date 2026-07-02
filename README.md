@@ -65,19 +65,7 @@ npm run start
 
 ---
 
-## Variables d'environnement
 
-Créer un fichier `.env.local` à la racine (ne jamais le committer) :
-
-```env
-NEXT_PUBLIC_SITE_URL=https://buscord.online
-
-SMTP_HOST=mail.buscord.online
-SMTP_PORT=465
-SMTP_USER=contact@buscord.online
-SMTP_PASS=votre_mot_de_passe
-CONTACT_TO=contact@buscord.online
-SMTP_TLS_REJECT_UNAUTHORIZED=false
 ```
 
 | Variable | Description |
