@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ArrowUpRight } from 'lucide-react';
-import { contact, phoneHref, whatsappHref, services } from '@/data/buscord';
+import { contact, phoneHref, whatsappHref, services, projectFolders, projectImage } from '@/data/buscord';
 
 const initialForm = {
   prenom: '',
@@ -188,7 +188,7 @@ export default function ContactForm() {
           <div className="flex flex-col gap-6">
             <div className="overflow-hidden rounded-3xl">
               <img
-                src="/images/projects/bissou-batiment.jpg"
+                src={projectImage(projectFolders.bissou, 'bissou-batiment.jpg')}
                 alt="BUSCORD au Burkina Faso"
                 className="h-[250px] w-full object-cover sm:h-[300px] lg:h-[350px]"
               />

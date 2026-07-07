@@ -11,10 +11,25 @@ export const company = {
 
 export const contact = {
   email: 'contact@buscord.online',
-  phones: ['+226 72 12 63 93', '+226 68 81 81 47'],
+  phones: ['+226 25 45 80 63', '+226 72 12 63 93', '+226 68 81 81 47'],
   whatsapp: '+226 77 16 24 63',
-  location: 'Ouagadougou, Burkina Faso',
+  location: 'Cité Azimmo, Ouaga 2000 — à proximité de la station Petro OR, Ouagadougou, Burkina Faso',
 };
+
+/** Dossiers d’images par projet (public/images/projects/) */
+export const projectFolders = {
+  yamwaya: 'Lycéé yamwaya',
+  bissou: 'école primaire de Bissou',
+  ezaca: 'école EZACA',
+  oronkua: 'Lutte contre la malnutrition — Oronkua',
+  sandogo: 'CEG de Sandogo B',
+  silmiyiri: 'école Nemnin de Silmiyiri',
+};
+
+/** Chemin encodé vers une image dans public/images/projects/{dossier}/{fichier} */
+export function projectImage(folder, file) {
+  return `/images/projects/${encodeURIComponent(folder)}/${encodeURIComponent(file)}`;
+}
 
 /** Lien tel: à partir d'un numéro affiché avec +226 */
 export function phoneHref(phone) {
@@ -74,7 +89,7 @@ export const services = [
     slug: 'conception-projets',
     number: '[01]',
     title: 'Conception de projets',
-    img: '/images/projects/bissou-panneau.jpg',
+    img: projectImage(projectFolders.bissou, 'bissou-panneau.jpg'),
     desc: 'Élaboration de dossiers techniques et financiers pour des projets humanitaires et de développement, alignés sur les exigences des bailleurs.',
     items: [
       'Études de faisabilité et cadrage',
@@ -116,7 +131,7 @@ export const services = [
     slug: 'suivi-controle',
     number: '[02]',
     title: 'Suivi & contrôle des travaux',
-    img: '/images/projects/yamwaya-supervision.jpg',
+    img: projectImage(projectFolders.yamwaya, 'yamwaya-supervision.jpg'),
     desc: 'Supervision rigoureuse des chantiers publics pour garantir la qualité, les délais et la conformité aux standards des financeurs.',
     items: [
       'Supervision de chantiers',
@@ -158,7 +173,7 @@ export const services = [
     slug: 'construction-ouvrages',
     number: '[03]',
     title: 'Construction d’ouvrages publics',
-    img: '/images/projects/ezaca-chantier.jpg',
+    img: projectImage(projectFolders.silmiyiri, 'silmiyiri-fondations.jpg'),
     desc: 'Réalisation d’infrastructures scolaires, sanitaires et hydrauliques au service des communautés vulnérables.',
     items: [
       'Écoles & salles de classe',
@@ -200,7 +215,7 @@ export const services = [
     slug: 'intermediation-sociale',
     number: '[04]',
     title: 'Intermédiation sociale',
-    img: '/images/projects/oronkua-cuisine-communautaire.jpg',
+    img: projectImage(projectFolders.oronkua, 'oronkua-cuisine-communautaire.jpg'),
     desc: 'Accompagnement des communautés pour favoriser l’adhésion, l’inclusion et la durabilité des projets de développement.',
     items: [
       'Sensibilisation communautaire',
@@ -243,24 +258,25 @@ export const services = [
 export const caseStudies = [
   {
     slug: 'lycee-yamwaya',
-    img: '/images/projects/yamwaya-inauguration.jpg',
-    midImg: '/images/projects/yamwaya-salle-reunion.jpg',
+    img: projectImage(projectFolders.yamwaya, 'yamwaya-inauguration.jpg'),
+    midImg: projectImage(projectFolders.yamwaya, 'yamwaya-salle-reunion.jpg'),
     gallery: [
-      { src: '/images/projects/yamwaya-inauguration.jpg', caption: 'Inauguration du projet — Lycée Yamwaya de Ouahigouya' },
-      { src: '/images/projects/yamwaya-salle-reunion.jpg', caption: 'Salle de réunion réhabilitée et équipée par BUSCORD' },
-      { src: '/images/projects/yamwaya-tables-bancs.jpg', caption: 'Tables-bancs confectionnés par BUSCORD' },
-      { src: '/images/projects/yamwaya-supervision.jpg', caption: 'Mission de supervision des travaux — Ministère de l’Économie et des Finances' },
-      { src: '/images/projects/yamwaya-visite-classe.jpg', caption: 'Visite de suivi dans une salle de classe réhabilitée' },
+      { src: projectImage(projectFolders.yamwaya, 'yamwaya-inauguration.jpg'), caption: 'Inauguration du projet — Lycée Yamwaya de Ouahigouya' },
+      { src: projectImage(projectFolders.yamwaya, 'yamwaya-salle-reunion.jpg'), caption: 'Salle de réunion réhabilitée et équipée par BUSCORD' },
+      { src: projectImage(projectFolders.yamwaya, 'yamwaya-tables-bancs.jpg'), caption: 'Tables-bancs confectionnés par BUSCORD' },
+      { src: projectImage(projectFolders.yamwaya, 'yamwaya-supervision.jpg'), caption: 'Mission de supervision des travaux — Ministère de l’Économie et des Finances' },
+      { src: projectImage(projectFolders.yamwaya, 'yamwaya-visite-classe.jpg'), caption: 'Visite de suivi dans une salle de classe réhabilitée' },
+      { src: projectImage(projectFolders.yamwaya, 'yamwaya-eleve-classe.jpg'), caption: 'Élèves dans une salle de classe réhabilitée — Lycée Yamwaya' },
     ],
     title: 'Réhabilitation du Lycée Yamwaya',
-    desc: '24 salles de classes réhabilitées et équipées à Ouahigouya pour plus de 1 200 élèves.',
+    desc: '24 salles de classes réhabilitées avec mobilier scolaire, réhabilitation et équipement de la salle de réunion — plus de 1 200 élèves impactés à Ouahigouya.',
     category: 'Éducation',
     client: 'Fonds de contrepartie Japon',
     result: '207M FCFA',
-    year: '2015–2018',
+    year: '2024–2026',
     featured: true,
     subtitle:
-      'Réhabilitation complète d’un lycée stratégique du Nord : salles, bureaux, salle de réunion équipée et mobilier scolaire.',
+      'Réhabilitation de 24 salles de classes avec mobilier scolaire, et réhabilitation complète de la salle de réunion (climatisation, mobilier, équipements audiovisuels).',
     stats: [
       { value: '24', label: 'Salles réhabilitées' },
       { value: '1200+', label: 'Élèves impactés' },
@@ -268,9 +284,9 @@ export const caseStudies = [
       { value: '100%', label: 'Conformité bailleur' },
     ],
     challenge:
-      'Le Lycée Yamwaya de Ouahigouya nécessitait une remise à niveau globale de ses infrastructures pour offrir des conditions d’étude dignes à plus de 1 200 élèves et à l’ensemble du corps enseignant.',
+      'Le Lycée Yamwaya de Ouahigouya nécessitait une remise à niveau globale : salles de classes dégradées, absence de mobilier scolaire adapté et salle de réunion inutilisable pour les activités pédagogiques et institutionnelles.',
     approach:
-      'BUSCORD a conçu et supervisé un projet de réhabilitation intégrée : salles de classe, magasins, bureaux, salle des professeurs et salle de réunion entièrement équipée (climatisation, mobilier, équipements audiovisuels).',
+      'BUSCORD a conçu et supervisé un projet de réhabilitation intégrée : remise en état des salles de classe avec fourniture de mobilier scolaire (tables-bancs), et réhabilitation complète de la salle de réunion avec climatisation, mobilier et équipements audiovisuels.',
     steps: [
       'Diagnostic technique et élaboration du dossier de financement.',
       'Réhabilitation de 24 salles de classes, 5 magasins et 4 bureaux.',
@@ -280,26 +296,26 @@ export const caseStudies = [
       'Réception et remise aux autorités éducatives.',
     ],
     solution:
-      'Un lycée entièrement réhabilité offrant des espaces de cours, de concertation et de réunion adaptés aux exigences pédagogiques modernes.',
+      'Un lycée réhabilité avec des salles de classe équipées de mobilier scolaire et une salle de réunion fonctionnelle pour les conférences, les concertations et les rencontres institutionnelles.',
     quote: {
       text: 'Ce projet a permis à l’ensemble des bénéficiaires de se sentir inclus dans la politique actuelle en matière d’éducation et de s’impliquer dans le développement du pays.',
       author: 'Bénéficiaires du Lycée Yamwaya',
     },
     results:
-      'Plus de 1 200 élèves poursuivent leur cursus dans de bonnes conditions. Les enseignants disposent d’espaces de préparation et de concertation. L’établissement peut accueillir conférences, travaux de groupes et rencontres parents-élèves.',
+      'Plus de 1 200 élèves poursuivent leur cursus dans des salles réhabilitées et équipées de mobilier scolaire. La salle de réunion réhabilitée accueille conférences, travaux de groupes et rencontres parents-élèves dans de bonnes conditions.',
     takeaway:
       'La réhabilitation intégrée d’un établissement scolaire transforme durablement les conditions d’apprentissage et renforce la confiance des communautés envers les politiques éducatives.',
   },
   {
     slug: 'ecole-bissou',
-    img: '/images/projects/bissou-batiment.jpg',
-    midImg: '/images/projects/bissou-eleves.jpg',
+    img: projectImage(projectFolders.bissou, 'bissou-batiment.jpg'),
+    midImg: projectImage(projectFolders.bissou, 'bissou-eleves.jpg'),
     gallery: [
-      { src: '/images/projects/bissou-panneau.jpg', caption: 'Panneau du projet — École primaire de Bissou (Commune de Godyr)' },
-      { src: '/images/projects/bissou-batiment.jpg', caption: 'Bâtiment des salles de classes à l’école de Bissou' },
-      { src: '/images/projects/bissou-eleves.jpg', caption: 'Élèves dans une salle de classe à l’école de Bissou' },
-      { src: '/images/projects/bissou-inauguration.jpg', caption: 'Cérémonie d’inauguration de l’école de Bissou' },
-      { src: '/images/projects/bissou-visite.jpg', caption: 'Visite du site — École de Bissou' },
+      { src: projectImage(projectFolders.bissou, 'bissou-panneau.jpg'), caption: 'Panneau du projet — École primaire de Bissou (Commune de Godyr)' },
+      { src: projectImage(projectFolders.bissou, 'bissou-batiment.jpg'), caption: 'Bâtiment des salles de classes à l’école de Bissou' },
+      { src: projectImage(projectFolders.bissou, 'bissou-eleves.jpg'), caption: 'Élèves dans une salle de classe à l’école de Bissou' },
+      { src: projectImage(projectFolders.bissou, 'bissou-inauguration.jpg'), caption: 'Cérémonie d’inauguration de l’école de Bissou' },
+      { src: projectImage(projectFolders.bissou, 'bissou-visite.jpg'), caption: 'Visite du site — École de Bissou' },
     ],
     title: 'École primaire de Bissou',
     desc: 'Construction d’une école complète dans la commune rurale de Godyr (Sanguié).',
@@ -339,12 +355,13 @@ export const caseStudies = [
   },
   {
     slug: 'ecole-ezaca',
-    img: '/images/projects/ezaca-chantier.jpg',
-    midImg: '/images/projects/ezaca-fondations.jpg',
+    img: projectImage(projectFolders.ezaca, '100854631.jpg'),
+    midImg: projectImage(projectFolders.ezaca, 'ezaca-fondations.jpg'),
     gallery: [
-      { src: '/images/projects/ezaca-chantier.jpg', caption: 'Suivi de chantier — École Ezaca B, Trame d’accueil' },
-      { src: '/images/projects/ezaca-fondations.jpg', caption: 'Travaux de fondations — École Ezaca B' },
-      { src: '/images/projects/chantier-fondations-2.jpg', caption: 'Supervision des travaux sur site' },
+      { src: projectImage(projectFolders.ezaca, '100854631.jpg'), caption: 'Chantier — École Ezaca B, Trame d’accueil' },
+      { src: projectImage(projectFolders.ezaca, 'ezaca-fondations.jpg'), caption: 'Travaux de fondations — École Ezaca B' },
+      { src: projectImage(projectFolders.ezaca, '100854632.jpg'), caption: 'Suivi de chantier — École Ezaca B' },
+      { src: projectImage(projectFolders.ezaca, '100854633.jpg'), caption: 'Avancement des travaux — École Ezaca B' },
     ],
     title: 'École Ezaca B — Ouagadougou',
     desc: 'Extension de l’école Ezaca B à la Trame d’accueil : 675 élèves accueillis dans de nouvelles salles.',
@@ -384,22 +401,23 @@ export const caseStudies = [
   },
   {
     slug: 'malnutrition-oronkua',
-    img: '/images/projects/oronkua-nutrition.jpg',
-    midImg: '/images/projects/oronkua-cuisine-communautaire.jpg',
+    img: projectImage(projectFolders.oronkua, 'oronkua-nutrition.jpg'),
+    midImg: projectImage(projectFolders.oronkua, 'oronkua-cuisine-communautaire.jpg'),
     gallery: [
-      { src: '/images/projects/oronkua-nutrition.jpg', caption: 'Accompagnement nutritionnel des enfants — Commune d’Oronkua' },
-      { src: '/images/projects/oronkua-cuisine-communautaire.jpg', caption: 'Séance de sensibilisation communautaire — lutte contre la malnutrition' },
+      { src: projectImage(projectFolders.oronkua, 'oronkua-nutrition.jpg'), caption: 'Accompagnement nutritionnel des enfants — Commune d’Oronkua' },
+      { src: projectImage(projectFolders.oronkua, 'oronkua-cuisine-communautaire.jpg'), caption: 'Séance de sensibilisation communautaire — lutte contre la malnutrition' },
+      { src: projectImage(projectFolders.oronkua, 'WhatsApp Image 2026-07-05 at 17.17.10.jpeg'), caption: 'Activité de terrain — lutte contre la malnutrition à Oronkua' },
     ],
     title: 'Lutte contre la malnutrition — Oronkua',
-    desc: 'Projet de santé communautaire dans 14 villages de la commune d’Oronkua.',
+    desc: 'Projet de santé communautaire couvrant 7 villages sur les 14 de la commune d’Oronkua.',
     category: 'Santé',
     client: 'FSSN (France)',
     result: '3M FCFA',
     year: '2021',
     subtitle:
-      'Sensibilisation, visites à domicile et équipements pour la lutte contre la malnutrition infantile.',
+      'Sensibilisation, visites à domicile et équipements pour la lutte contre la malnutrition infantile dans 7 villages de la commune.',
     stats: [
-      { value: '14', label: 'Villages couverts' },
+      { value: '7', label: 'Villages couverts (sur 14)' },
       { value: '3M', label: 'FCFA budget' },
       { value: '2021', label: 'Année' },
       { value: 'VAD', label: 'Visites à domicile' },
@@ -412,7 +430,7 @@ export const caseStudies = [
       'Montage du dossier et obtention du financement FSSN.',
       'Organisation de séances de sensibilisation.',
       'Acquisition d’ustensiles de cuisine et de boîtes à images.',
-      'Réalisation de visites à domicile dans 14 villages.',
+      'Réalisation de visites à domicile dans 7 villages de la commune.',
       'Coordination avec les acteurs de santé de proximité.',
     ],
     solution:
@@ -422,17 +440,19 @@ export const caseStudies = [
       author: 'Association Niban-Zoéré',
     },
     results:
-      'Amélioration de la sensibilisation et de l’accompagnement des ménages sur la nutrition infantile dans 14 villages.',
+      'Amélioration de la sensibilisation et de l’accompagnement des ménages sur la nutrition infantile dans 7 villages sur les 14 de la commune.',
     takeaway:
       'Les projets de santé communautaire réussissent lorsqu’ils s’appuient sur les structures locales et les acteurs de première ligne.',
   },
   {
     slug: 'ceg-sandogo',
-    img: '/images/projects/sandogo-batiment.jpg',
-    midImg: '/images/projects/sandogo-visite.jpg',
+    img: projectImage(projectFolders.sandogo, 'sandogo-batiment.jpg'),
+    midImg: projectImage(projectFolders.sandogo, 'sandogo-visite.jpg'),
     gallery: [
-      { src: '/images/projects/sandogo-batiment.jpg', caption: 'Nouvelles salles de classe — CEG Sandogo B' },
-      { src: '/images/projects/sandogo-visite.jpg', caption: 'Visite de suivi du chantier — CEG Sandogo B' },
+      { src: projectImage(projectFolders.sandogo, 'sandogo-batiment.jpg'), caption: 'Nouvelles salles de classe — CEG Sandogo B' },
+      { src: projectImage(projectFolders.sandogo, 'sandogo-visite.jpg'), caption: 'Visite de suivi du chantier — CEG Sandogo B' },
+      { src: projectImage(projectFolders.sandogo, 'WhatsApp Image 2026-07-05 at 17.11.20.jpeg'), caption: 'Suivi de chantier — CEG Sandogo B' },
+      { src: projectImage(projectFolders.sandogo, 'WhatsApp Image 2026-07-05 at 17.11.19 (2).jpeg'), caption: 'Avancement des travaux — CEG Sandogo B' },
     ],
     title: 'CEG Sandogo B — Ouagadougou',
     desc: '4 salles de classe et mobilier scolaire pour renforcer la capacité d’accueil du CEG.',
@@ -471,15 +491,16 @@ export const caseStudies = [
   },
   {
     slug: 'ecole-silmiyiri',
-    img: '/images/projects/silmiyiri-fondations.jpg',
-    midImg: '/images/projects/ezaca-chantier.jpg',
+    img: projectImage(projectFolders.silmiyiri, 'silmiyiri-fondations.jpg'),
+    midImg: projectImage(projectFolders.silmiyiri, 'chantier-fondations-2.jpg'),
     gallery: [
-      { src: '/images/projects/silmiyiri-fondations.jpg', caption: 'Fondations — École Silmiyiri, Ouagadougou' },
-      { src: '/images/projects/ezaca-chantier.jpg', caption: 'Suivi-contrôle des travaux de construction' },
-      { src: '/images/projects/chantier-fondations-2.jpg', caption: 'Inspection de chantier avec l’équipe BUSCORD' },
+      { src: projectImage(projectFolders.silmiyiri, 'silmiyiri-fondations.jpg'), caption: 'Fondations — École Silmiyiri (école Nemnin de Silmiyiri), Ouagadougou' },
+      { src: projectImage(projectFolders.silmiyiri, 'chantier-fondations-2.jpg'), caption: 'Inspection de chantier avec l’équipe BUSCORD' },
+      { src: projectImage(projectFolders.silmiyiri, 'WhatsApp Image 2026-07-05 at 17.25.56.jpeg'), caption: 'Suivi-contrôle des travaux — École Nemnin de Silmiyiri' },
+      { src: projectImage(projectFolders.silmiyiri, 'WhatsApp Image 2026-07-05 at 17.26.31.jpeg'), caption: 'Avancement du chantier — École Nemnin de Silmiyiri' },
     ],
-    title: 'École Silmiyiri — Ouagadougou',
-    desc: 'Construction de salles de classe, latrines et château d’eau pour l’école Silmiyiri.',
+    title: 'École Silmiyiri (école Nemnin de Silmiyiri) — Ouagadougou',
+    desc: 'Construction de salles de classe, latrines et château d’eau pour l’école Silmiyiri (école Nemnin de Silmiyiri).',
     category: 'Éducation',
     client: 'Ambassade du Japon (APL)',
     result: 'En cours',
@@ -493,7 +514,7 @@ export const caseStudies = [
       { value: '2025', label: 'Année' },
     ],
     challenge:
-      'L’école Silmiyiri nécessitait des infrastructures scolaires et WASH adaptées aux besoins d’une population scolarisée croissante.',
+      'L’école Silmiyiri (école Nemnin de Silmiyiri) nécessitait des infrastructures scolaires et WASH adaptées aux besoins d’une population scolarisée croissante.',
     approach:
       'BUSCORD assure la conception et le suivi-contrôle d’un projet intégré incluant bâtiments, assainissement et adduction d’eau.',
     steps: [
@@ -510,7 +531,7 @@ export const caseStudies = [
       author: 'BUSCORD',
     },
     results:
-      'Amélioration des conditions d’apprentissage et d’hygiène pour les élèves de Silmiyiri.',
+      'Amélioration des conditions d’apprentissage et d’hygiène pour les élèves de Silmiyiri (école Nemnin de Silmiyiri).',
     takeaway:
       'Les projets scolaires intégrant WASH maximisent l’impact sur la santé et la scolarisation des enfants.',
   },
@@ -553,13 +574,37 @@ export const partners = [
     logo: '/images/partners/burkina-armoiries.png',
     alt: 'Ministère de l’Économie et des Finances du Burkina Faso',
   },
+  {
+    id: 'niban-zeoere',
+    name: 'Association Niban-Zéoéré',
+    logo: null,
+    alt: 'Association Niban-Zéoéré',
+  },
+  {
+    id: 'aslp-pouni',
+    name: 'Association des Animateurs et Superviseurs de Linguistique de Pouni',
+    logo: null,
+    alt: 'Association des Animateurs et Superviseurs de Linguistique de Pouni',
+  },
+  {
+    id: 'arbre-palabre',
+    name: 'Association Arbre à Palabre',
+    logo: null,
+    alt: 'Association Arbre à Palabre',
+  },
+  {
+    id: 'femmes-du-sud',
+    name: 'Association Femmes du Sud',
+    logo: null,
+    alt: 'Association Femmes du Sud',
+  },
 ];
 
 export const milestones = [
   {
     year: '2021',
     title: 'Santé communautaire à Oronkua',
-    desc: 'Conception d’un projet de lutte contre la malnutrition infantile financé par le FSSN dans 14 villages.',
+    desc: 'Conception d’un projet de lutte contre la malnutrition infantile financé par le FSSN — 7 villages couverts sur les 14 de la commune.',
   },
   {
     year: '2022',
@@ -573,11 +618,11 @@ export const milestones = [
   },
   {
     year: '2025',
-    title: 'Écoles Ezaca B & Silmiyiri',
+    title: 'Écoles Ezaca B & Silmiyiri (école Nemnin de Silmiyiri)',
     desc: 'Projets d’extension et de construction à Ouagadougou, avec réception provisoire d’Ezaca B en octobre 2025.',
   },
   {
-    year: '2015–18',
+    year: '2024–2026',
     title: 'Lycée Yamwaya',
     desc: 'Réhabilitation majeure de 24 salles à Ouahigouya — projet phare de 207 millions FCFA.',
   },
@@ -598,6 +643,16 @@ export const faqs = [
     question: 'Proposez-vous uniquement la conception ou aussi la réalisation ?',
     answer:
       'Nous couvrons l’ensemble de la chaîne : conception de projets, suivi-contrôle des travaux, réalisation d’ouvrages publics, intermédiation sociale et production de mobilier.',
+  },
+  {
+    question: 'Quelle est votre politique de protection de l’enfance ?',
+    answer:
+      'BUSCORD applique une politique de protection des droits de l’enfant sur l’ensemble de ses activités. Nous combattons toute forme de maltraitance à l’égard des enfants et dénonçons tout comportement qui y est assimilé. Cet engagement guide nos interventions en milieu scolaire, sanitaire et communautaire.',
+  },
+  {
+    question: 'Comment intégrez-vous l’environnement dans vos projets ?',
+    answer:
+      'Nous travaillons à la protection et à la préservation de l’environnement à chaque étape : conception, exécution des travaux et sensibilisation des communautés. Gestion des déchets de chantier, choix des matériaux et respect des espaces naturels font partie de notre approche responsable.',
   },
   {
     question: 'Comment démarrer une collaboration avec BUSCORD ?',
@@ -639,6 +694,31 @@ export const partnershipTabs = [
     label: 'Impact communautaire',
     content:
       'Chaque projet est pensé pour les bénéficiaires directs : inclusion, intermédiation sociale et durabilité des ouvrages livrés.',
+  },
+  {
+    id: 'tab-4',
+    label: 'Engagement responsable',
+    content:
+      'BUSCORD applique une politique de protection des droits de l’enfant et combat toute forme de maltraitance. Nous travaillons également à la protection et à la préservation de l’environnement dans toutes nos interventions.',
+  },
+];
+
+export const commitments = [
+  {
+    id: 'child-protection',
+    title: 'Protection des droits de l’enfant',
+    description:
+      'Dans tout ce que nous faisons, BUSCORD applique une politique de protection des droits de l’enfant. Nous combattons toute forme de maltraitance à l’égard des enfants et dénonçons tout comportement qui y est assimilé — en milieu scolaire, sur nos chantiers et dans nos actions de sensibilisation communautaire.',
+    policy:
+      'BUSCORD s’engage à protéger les droits et la dignité de tout enfant touché par ses activités. Toute forme de maltraitance, d’exploitation, de violence ou de négligence à l’égard des enfants est strictement proscrite. Les membres de l’équipe, les partenaires et les prestataires sont tenus de respecter ce principe. Tout manquement ou suspicion doit être signalé et fera l’objet d’une prise en charge conforme aux procédures en vigueur.',
+  },
+  {
+    id: 'environment',
+    title: 'Protection de l’environnement',
+    description:
+      'Nous travaillons à la protection et à la préservation de l’environnement dans la conception, le suivi et la réalisation de nos projets : gestion responsable des déchets de chantier, limitation de l’impact sur les espaces naturels et sensibilisation des communautés bénéficiaires.',
+    policy:
+      'BUSCORD intègre la protection de l’environnement dans l’ensemble de son cycle d’intervention. Nos équipes veillent à réduire l’empreinte écologique des chantiers, à respecter les normes applicables et à favoriser des pratiques durables. La préservation des ressources naturelles et la sensibilisation des populations font partie intégrante de notre démarche de développement responsable.',
   },
 ];
 

@@ -11,8 +11,8 @@ export default function PartnershipSection() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
         <div className="relative gs-reveal order-2 lg:order-1">
           <img
-            src="/images/partnership-africa.jpg"
-            alt="Équipe BUSCORD sur un chantier au Burkina Faso"
+            src="/images/partnership-equipe.png"
+            alt="Équipe BUSCORD en réunion de travail — Ouagadougou, Burkina Faso"
             className="h-[280px] w-full rounded-3xl object-cover sm:h-[350px] md:h-[500px]"
           />
           <div className="absolute bottom-3 left-3 right-3 rounded-2xl bg-primary/90 p-4 text-white backdrop-blur sm:bottom-4 sm:left-4 sm:right-4 sm:p-5 md:bottom-6 md:left-6 md:right-6 md:p-6">

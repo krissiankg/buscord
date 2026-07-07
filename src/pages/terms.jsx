@@ -1,5 +1,5 @@
 import SeoHead from '@/components/seo/SeoHead';
-import { company, contact } from '@/data/buscord';
+import { company, contact, commitments } from '@/data/buscord';
 
 const sections = [
   {
@@ -32,12 +32,19 @@ const sections = [
       'Les données collectées (nom, e-mail, téléphone, message) servent uniquement à traiter vos demandes. Elles ne sont pas vendues à des tiers. Vous pouvez demander leur modification ou suppression en nous contactant.',
   },
   {
-    title: '7. Droit applicable',
+    title: '7. Engagements sociaux et environnementaux',
+    items: commitments.map((item) => ({
+      subtitle: item.title,
+      content: item.policy,
+    })),
+  },
+  {
+    title: '8. Droit applicable',
     content:
       'Les présentes mentions sont régies par le droit burkinabè. Tout litige relatif à l\'utilisation du site sera soumis aux juridictions compétentes du Burkina Faso.',
   },
   {
-    title: '8. Contact',
+    title: '9. Contact',
     content: `Pour toute question : ${contact.email} — ${contact.phones.join(' / ')} — WhatsApp ${contact.whatsapp}.`,
   },
 ];
@@ -73,9 +80,22 @@ export default function Terms() {
               {sections.map((section) => (
                 <div key={section.title}>
                   <h2 className="mb-3 text-xl font-bold text-primary md:text-2xl">{section.title}</h2>
-                  <p className="text-sm leading-relaxed text-gray-600 md:text-base md:leading-relaxed">
-                    {section.content}
-                  </p>
+                  {section.items ? (
+                    <div className="space-y-5">
+                      {section.items.map((item) => (
+                        <div key={item.subtitle}>
+                          <h3 className="mb-2 text-base font-semibold text-primary md:text-lg">{item.subtitle}</h3>
+                          <p className="text-sm leading-relaxed text-gray-600 md:text-base md:leading-relaxed">
+                            {item.content}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <p className="text-sm leading-relaxed text-gray-600 md:text-base md:leading-relaxed">
+                      {section.content}
+                    </p>
+                  )}
                 </div>
               ))}
             </div>

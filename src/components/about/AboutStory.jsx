@@ -1,3 +1,5 @@
+import { projectFolders, projectImage } from '@/data/buscord';
+
 export default function AboutStory() {
   return (
     <section className="px-6 py-16 md:py-24">
@@ -38,7 +40,7 @@ export default function AboutStory() {
 
           <div className="gs-reveal relative">
             <img
-              src="/images/projects/yamwaya-inauguration.jpg"
+              src={projectImage(projectFolders.yamwaya, 'yamwaya-inauguration.jpg')}
               alt="Inauguration du Lycée Yamwaya"
               className="h-[400px] w-full rounded-3xl object-cover md:h-[500px]"
             />

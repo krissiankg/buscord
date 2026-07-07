@@ -14,6 +14,7 @@ export function organizationJsonLd() {
     telephone: contact.phones[0],
     address: {
       '@type': 'PostalAddress',
+      streetAddress: 'Cité Azimmo, Ouaga 2000 — à proximité de la station Petro OR',
       addressLocality: company.city,
       addressCountry: 'BF',
     },

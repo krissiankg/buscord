@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Pin, ArrowUpRight } from 'lucide-react';
-import { contact } from '@/data/buscord';
+import { contact, projectFolders, projectImage } from '@/data/buscord';
 
 export default function ScheduleSection() {
   return (
@@ -15,7 +15,7 @@ export default function ScheduleSection() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 gs-reveal">
         <div className="lg:col-span-7">
           <img
-            src="/images/projects/yamwaya-inauguration.jpg"
+            src={projectImage(projectFolders.yamwaya, 'yamwaya-inauguration.jpg')}
             alt="Projet de développement au Burkina Faso"
             className="w-full h-full min-h-[300px] md:min-h-[400px] object-cover rounded-3xl"
           />

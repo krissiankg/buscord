@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
-import { company } from '@/data/buscord';
+import { company, projectFolders, projectImage } from '@/data/buscord';
 
 export default function AboutHero() {
   return (
@@ -42,7 +42,7 @@ export default function AboutHero() {
 
           <div className="relative overflow-hidden rounded-3xl">
             <img
-              src="/images/projects/yamwaya-salle-reunion.jpg"
+              src={projectImage(projectFolders.yamwaya, 'yamwaya-salle-reunion.jpg')}
               alt="Salle de réunion réhabilitée — Lycée Yamwaya"
               className="h-[300px] w-full object-cover md:h-[400px] lg:h-[450px]"
             />
