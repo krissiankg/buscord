@@ -52,7 +52,7 @@ export const navLinks = [
 ];
 
 export const heroStats = [
-  { number: '6+', label: 'Projets structurants livrés' },
+  { number: '7+', label: 'Projets structurants livrés' },
   { number: '440M+', label: 'FCFA de projets montés' },
   { number: '1200+', label: 'Élèves impactés (Yamwaya)' },
   { number: '100%', label: 'Engagement terrain & conformité' },
@@ -60,7 +60,7 @@ export const heroStats = [
 
 export const stats = [
   {
-    number: '6+',
+    number: '7+',
     desc: 'Projets de conception, construction et réhabilitation livrés avec des partenaires internationaux.',
   },
   {

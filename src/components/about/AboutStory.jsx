@@ -24,7 +24,7 @@ export default function AboutStory() {
 
             <div className="flex flex-wrap gap-8 border-t border-gray-100 pt-8">
               <div>
-                <h3 className="text-4xl font-bold text-primary md:text-5xl">6+</h3>
+                <h3 className="text-4xl font-bold text-primary md:text-5xl">7+</h3>
                 <p className="mt-1 text-sm font-medium text-gray-500">Projets majeurs livrés</p>
               </div>
               <div>

@@ -20,7 +20,7 @@ export default function AboutSection() {
             </p>
 
             <div className="border-l-2 border-accent pl-5">
-              <h3 className="text-6xl font-bold leading-none tracking-[-0.05em] text-primary md:text-7xl">6+</h3>
+              <h3 className="text-6xl font-bold leading-none tracking-[-0.05em] text-primary md:text-7xl">7+</h3>
               <p className="mt-2 text-sm font-bold text-primary">Projets structurants réalisés</p>
             </div>
           </div>
