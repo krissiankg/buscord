@@ -93,6 +93,17 @@ export default function Footer() {
           </p>
           <p className="text-[10px] text-gray-400 md:text-xs">
             &copy; {new Date().getFullYear()} {company.name}. Tous droits réservés.
+            <span className="mx-2 text-gray-300" aria-hidden="true">
+              ·
+            </span>
+            <a
+              href="https://mail.buscord.online/roundcube/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 transition hover:text-gray-600"
+            >
+              Webmail
+            </a>
           </p>
           <p className="text-[10px] text-gray-400 md:text-xs">
             Site conçu par{' '}
