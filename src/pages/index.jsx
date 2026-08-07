@@ -6,6 +6,7 @@ import StatsSection from "@/components/home/StatsSection";
 import ServicesSection from "@/components/home/ServicesSection";
 import ProcessSection from "@/components/home/ProcessSection";
 import PartnershipSection from "@/components/home/PartnershipSection";
+import TeamSection from "@/components/home/TeamSection";
 import CaseStudiesSection from "@/components/home/CaseStudiesSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import ScheduleSection from "@/components/home/ScheduleSection";
@@ -29,6 +30,7 @@ export default function Home() {
         <ServicesSection />
         <ProcessSection />
         <PartnershipSection />
+        <TeamSection />
         <CaseStudiesSection />
         <TestimonialsSection />
         <ScheduleSection />

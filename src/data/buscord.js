@@ -729,3 +729,49 @@ export function getServiceBySlug(slug) {
 export function getCaseStudyBySlug(slug) {
   return caseStudies.find((c) => c.slug === slug);
 }
+
+export const team = [
+  {
+    id: 'pdg',
+    name: 'Président Directeur Général',
+    role: 'PDG & Fondateur de BUSCORD',
+    image: '/images/equipe/pdg.jpeg',
+    desc: 'Supervision stratégique, direction générale et conduite globale des projets de conception, suivi-contrôle et réalisation.',
+    badge: 'Direction Générale',
+    isLeader: true,
+  },
+  {
+    id: 'daouda-bazie',
+    name: 'Daouda BAZIÉ',
+    role: 'Ingénieur BTP',
+    image: '/images/equipe/Daouda BAZIÉ.jpeg',
+    desc: 'Suivi de chantier, contrôle qualité et supervision technique des infrastructures (ici avec un table-banc confectionné par BUSCORD).',
+    badge: 'Ingénierie & Suivi',
+  },
+  {
+    id: 'bayala-nathalie',
+    name: 'BAYALA Nathalie',
+    role: 'Secrétaire de direction',
+    image: '/images/equipe/BAYALA Nathalie.jpeg',
+    desc: 'Gestion administrative, secrétariat général et coordination relationnelle du bureau.',
+    badge: 'Administration',
+  },
+  {
+    id: 'bationo-marielle',
+    name: 'Bationo Marielle Laurencia',
+    role: 'Responsable logistique',
+    image: '/images/equipe/Bationo Marielle Laurencia.jpeg',
+    desc: 'Organisation des approvisionnements, gestion des équipements de chantier et chaîne logistique terrain.',
+    badge: 'Logistique',
+  },
+  {
+    id: 'zongo-maminata',
+    name: 'Mme ZONGO / TARNAGDA Maminata',
+    role: 'Responsable des affaires financières',
+    image: null,
+    desc: 'Supervision financière, contrôle budgétaire et suivi des reportings comptables destinés aux bailleurs.',
+    badge: 'Finance & Gestion',
+    pendingImage: true,
+  },
+];
+
