@@ -768,10 +768,9 @@ export const team = [
     id: 'zongo-maminata',
     name: 'Mme ZONGO / TARNAGDA Maminata',
     role: 'Responsable des affaires financières',
-    image: null,
+    image: '/images/equipe/ZONGO TARNAGDA Maminata.jpeg',
     desc: 'Supervision financière, contrôle budgétaire et suivi des reportings comptables destinés aux bailleurs.',
     badge: 'Finance & Gestion',
-    pendingImage: true,
   },
 ];
 
